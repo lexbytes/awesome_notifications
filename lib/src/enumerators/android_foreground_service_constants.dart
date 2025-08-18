@@ -50,6 +50,9 @@ class AndroidForegroundServiceConstants {
   /// Corresponds to [`ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE`](https://developer.android.com/reference/android/content/pm/ServiceInfo#FOREGROUND_SERVICE_TYPE_MICROPHONE).
   static const int foregroundServiceTypeMicrophone = 128;
 
+  /// Corresponds to [`ServiceInfo.FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED`](https://developer.android.com/reference/android/content/pm/ServiceInfo#FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED).
+  static const int foregroundServiceTypeSystemExempted = 1024;
+
   static ForegroundStartMode startModeFromAndroidValues(int value) {
     switch (value) {
       case 0:
@@ -84,6 +87,8 @@ class AndroidForegroundServiceConstants {
         return ForegroundServiceType.camera;
       case 128:
         return ForegroundServiceType.microphone;
+      case 1024:
+        return ForegroundServiceType.SystemExempted;
       case 0:
       default:
         return ForegroundServiceType.none;
