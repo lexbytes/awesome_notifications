@@ -88,7 +88,7 @@ class AndroidForegroundServiceConstants {
       case 128:
         return ForegroundServiceType.microphone;
       case 1024:
-        return ForegroundServiceType.SystemExempted;
+        return ForegroundServiceType.systemExempted;
       case 0:
       default:
         return ForegroundServiceType.none;
